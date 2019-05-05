@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.example.healthcorner.database.model.User;
 
@@ -120,5 +121,33 @@ public class SqliteHelper extends SQLiteOpenHelper {
 
         //if email does not exist return false
         return false;
+    }
+
+    public User getUser(String email){
+        String id = "";
+        String userName = "";
+        String userEmail = "";
+        String password = "";
+
+        //get writable database
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //use rawQuery method
+        Cursor cursor = db.rawQuery(
+                "select * from users where email=?",
+                new String[]{email});
+
+        while (cursor.moveToNext()) {
+            id = cursor.getString(0);
+            userName = cursor.getString(1);
+            userEmail = cursor.getString(2);
+            password = cursor.getString(3);
+            //Log.e("user:", id + ": " + userName + ", " + userEmail + "," + password);
+        }
+
+        cursor.close();
+        User getUser = new User(id, userName, userEmail, password);
+
+        return getUser;
     }
 }
