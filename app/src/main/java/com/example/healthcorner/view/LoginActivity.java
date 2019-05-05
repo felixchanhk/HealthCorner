@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.healthcorner.HomeScreen;
 import com.example.healthcorner.R;
 import com.example.healthcorner.database.SqliteHelper;
 import com.example.healthcorner.database.model.User;
@@ -62,10 +63,10 @@ public class LoginActivity extends AppCompatActivity {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
 
                         //User Logged in Successfully Launch You home screen activity
-                        Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent loginIntent = new Intent(LoginActivity.this, HomeScreen.class);
                         User getUser = sqliteHelper.getUser(Email);
                         Log.e("login test: ",getUser.getEmail());
-                        loginIntent.putExtra("userEmail",getUser.getEmail());
+                        loginIntent.putExtra("userEmail",Email);
 
                         startActivity(loginIntent);
                         finish();
