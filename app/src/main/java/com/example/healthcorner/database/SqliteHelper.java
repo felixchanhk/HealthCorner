@@ -72,13 +72,13 @@ public class SqliteHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         //Put username in  @values
-        values.put(KEY_USER_NAME, user.userName);
+        values.put(KEY_USER_NAME, user.getUserName());
 
         //Put email in  @values
-        values.put(KEY_EMAIL, user.email);
+        values.put(KEY_EMAIL, user.getEmail());
 
         //Put password in  @values
-        values.put(KEY_PASSWORD, user.password);
+        values.put(KEY_PASSWORD, user.getPassword());
 
         // insert row
         long todo_id = db.insert(TABLE_USERS, null, values);
@@ -89,7 +89,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_USERS,// Selecting Table
                 new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},//Selecting columns want to query
                 KEY_EMAIL + "=?",
-                new String[]{user.email},//Where clause
+                new String[]{user.getEmail()},//Where clause
                 null, null, null);
 
         if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
@@ -97,7 +97,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
             User user1 = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
 
             //Match both passwords check they are same or not
-            if (user.password.equalsIgnoreCase(user1.password)) {
+            if (user.getPassword().equalsIgnoreCase(user1.getPassword())) {
                 return user1;
             }
         }

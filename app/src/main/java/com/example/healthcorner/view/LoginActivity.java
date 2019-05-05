@@ -64,8 +64,8 @@ public class LoginActivity extends AppCompatActivity {
                         //User Logged in Successfully Launch You home screen activity
                         Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
                         User getUser = sqliteHelper.getUser(Email);
-                        Log.e("login test: ",getUser.email);
-                        loginIntent.putExtra("userEmail",getUser.email);
+                        Log.e("login test: ",getUser.getEmail());
+                        loginIntent.putExtra("userEmail",getUser.getEmail());
 
                         startActivity(loginIntent);
                         finish();
