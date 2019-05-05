@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.healthcorner.R;
 import com.example.healthcorner.database.SqliteHelper;
 import com.example.healthcorner.database.model.User;
+import com.google.gson.Gson;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -60,9 +61,10 @@ public class LoginActivity extends AppCompatActivity {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
 
                         //User Logged in Successfully Launch You home screen activity
-                       /* Intent intent=new Intent(LoginActivity.this,HomeScreenActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("book",new Gson().toJson(currentUser));
                         startActivity(intent);
-                        finish();*/
+                        finish();
                     } else {
 
                         //User Logged in Failed
