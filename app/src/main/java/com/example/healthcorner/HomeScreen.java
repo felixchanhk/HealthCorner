@@ -17,6 +17,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.TextView;
 
+import com.example.healthcorner.view.Bmi_Fragment;
+import com.example.healthcorner.view.DrinkWater_Fragment;
+
+
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -102,11 +106,14 @@ public class HomeScreen extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-            Log.e("action","a6");
+            Log.e("action","nav_home");
         } else if (id == R.id.nav_gallery) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Bmi_Fragment()).commit();
+            Log.e("action","nav_gallery");
         } else if (id == R.id.nav_slideshow) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new DrinkWater_Fragment()).commit();
         } else if (id == R.id.nav_tools) {
 
         } else if (id == R.id.nav_share) {
