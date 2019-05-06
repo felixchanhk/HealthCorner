@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -47,6 +49,12 @@ public class HomeScreen extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        if( savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Bmi_Fragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_gallery);
+        }
 
         Log.e("action","a1");
 
@@ -127,5 +135,12 @@ public class HomeScreen extends AppCompatActivity
 
         Log.e("action","a5");
         return true;
+    }
+
+    public void setFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 }
