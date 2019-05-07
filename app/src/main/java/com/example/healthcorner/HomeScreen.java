@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.widget.TextView;
 
 import com.example.healthcorner.view.Bmi_Fragment;
+import com.example.healthcorner.view.Dashboard_Fragment;
 import com.example.healthcorner.view.DrinkWater_Fragment;
 
 
@@ -52,7 +53,7 @@ public class HomeScreen extends AppCompatActivity
 
         if( savedInstanceState == null){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Bmi_Fragment()).commit();
+                    new Dashboard_Fragment()).commit();
             navigationView.setCheckedItem(R.id.nav_gallery);
         }
 
@@ -114,6 +115,8 @@ public class HomeScreen extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Dashboard_Fragment()).commit();
             Log.e("action","nav_home");
         } else if (id == R.id.nav_gallery) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -125,7 +128,11 @@ public class HomeScreen extends AppCompatActivity
         } else if (id == R.id.nav_tools) {
 
         } else if (id == R.id.nav_share) {
-
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
         } else if (id == R.id.nav_send) {
 
         }

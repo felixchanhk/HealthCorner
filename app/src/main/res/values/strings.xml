@@ -25,5 +25,21 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="drink_water_fragment_content">Cout Drinking Water Total</string>
+    <string name="drink_water_fragment_content">Count Drinking Water Total</string>
+    <string name="BMI_title">Calculate BMI:</string>
+    <string name="BMI_intro">Enter the following information to calculate your BMI value</string>
+    <string name="BMI_submit">Calculate</string>
+    <string name="Enter_height">Enter height</string>
+    <string name="severely_underweight">severely underweight</string>
+    <string name="very_underweight">very underweight</string>
+    <string name="underweight">underweight</string>
+    <string name="normal_weight">normal weight</string>
+    <string name="over_weight">over weight</string>
+    <string name="first_class_obese">first class obese</string>
+    <string name="second_class_obese">second class obese</string>
+    <string name="third_class_obese">third class obese</string>
+    <string name="menu_bmi_calculator">BMI Calculator</string>
+    <string name="menu_water_counter">Water Counter</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_dashboard">Dashboard</string>
 </resources>
