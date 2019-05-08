@@ -19,9 +19,12 @@ import com.example.healthcorner.database.model.User;
 public class RegisterActivity extends AppCompatActivity {
 
     //Declaration EditTexts
-    EditText editTextUserName;
-    EditText editTextEmail;
-    EditText editTextPassword;
+    EditText editTextUserName,
+            editTextEmail,
+            editTextPassword,
+            editTextHeight,
+            editTextWeight,
+            editTextAge;
 
     //Declaration TextInputLayout
     TextInputLayout textInputLayoutUserName;
@@ -48,12 +51,15 @@ public class RegisterActivity extends AppCompatActivity {
                     String UserName = editTextUserName.getText().toString();
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
+                    String Height = editTextHeight.getText().toString();
+                    String Weight = editTextWeight.getText().toString();
+                    String Age = editTextAge.getText().toString();
 
                     //Check in the database is there any user associated with  this email
                     if (!sqliteHelper.isEmailExists(Email)) {
 
                         //Email does not exist now add new user to database
-                        sqliteHelper.addUser(new User(null, UserName, Email, Password));
+                        sqliteHelper.addUser(new User(null, UserName, Email, Password, Height, Weight, Age));
                         Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -89,6 +95,10 @@ public class RegisterActivity extends AppCompatActivity {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextUserName = (EditText) findViewById(R.id.editTextUserName);
+        editTextHeight = (EditText) findViewById(R.id.editTextUserHeight);
+        editTextWeight = (EditText) findViewById(R.id.editTextUserWeight);
+        editTextAge = (EditText) findViewById(R.id.editTextUserAge);
+
         textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
         textInputLayoutUserName = (TextInputLayout) findViewById(R.id.textInputLayoutUserName);

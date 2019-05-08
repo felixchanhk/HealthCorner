@@ -44,9 +44,9 @@ public class LoginActivity extends AppCompatActivity {
         initViews();
 
         //User Logged in Successfully Launch You home screen activity
-        Intent loginIntent = new Intent(LoginActivity.this, HomeScreen.class);
-        startActivity(loginIntent);
-        finish();
+        //Intent loginIntent = new Intent(LoginActivity.this, HomeScreen.class);
+        //startActivity(loginIntent);
+        //finish();
 
         //set click event of login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                     String Password = editTextPassword.getText().toString();
 
                     //Authenticate user
-                    User currentUser = sqliteHelper.Authenticate(new User(null, null, Email, Password));
+                    User currentUser = sqliteHelper.Authenticate(new User(null, null, Email, Password, null, null, null));
 
                     //Check Authentication is successful or not
                     if (currentUser != null) {

@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">Health Corner</string>
-    <string name="login">login</string>
-    <string name="back_to_login">back to login</string>
-    <string name="register">register</string>
-    <string name="password">password</string>
-    <string name="email">email</string>
-    <string name="username">username</string>
+    <string name="login">Login</string>
+
+    <!-- Register Page -->
+    <string name="back_to_login">Back to login</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="userName">User Name</string>
+    <string name="userHeight">Height</string>
+    <string name="userWeight">Weight</string>
+    <string name="userAge">Age</string>
+
+
     <string name="navigation_drawer_open">Open navigation drawer2</string>
     <string name="navigation_drawer_close">Close navigation drawer3</string>
     <string name="nav_header_title" translatable="false">Android Studio4</string>
@@ -38,6 +45,8 @@
     <string name="first_class_obese">first class obese</string>
     <string name="second_class_obese">second class obese</string>
     <string name="third_class_obese">third class obese</string>
+
+    <!-- Dashboard and Navigation -->
     <string name="menu_bmi_calculator">BMI Calculator</string>
     <string name="menu_water_counter">Water Counter</string>
     <string name="menu_profile">Profile</string>
@@ -60,4 +69,7 @@
     <string name="dashboard_desc4">Calculate your BMI, make sure you are under health</string>
     <string name="dashboard_desc5">Drink at less 8 cups of water per day</string>
     <string name="dashboard_desc6">Check and review your health data here</string>
+
+
+
 </resources>

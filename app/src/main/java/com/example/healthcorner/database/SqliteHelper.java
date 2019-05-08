@@ -14,10 +14,10 @@ import com.example.healthcorner.database.model.User;
 public class SqliteHelper extends SQLiteOpenHelper {
 
     //DATABASE NAME
-    public static final String DATABASE_NAME = "loopwiki.com";
+    public static final String DATABASE_NAME = "health_corner";
 
     //DATABASE VERSION
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
 
     //TABLE NAME
     public static final String TABLE_USERS = "users";
@@ -35,13 +35,25 @@ public class SqliteHelper extends SQLiteOpenHelper {
     //COLUMN password
     public static final String KEY_PASSWORD = "password";
 
+    //COLUMN password
+    public static final String KEY_HEIGHT = "height";
+
+    //COLUMN password
+    public static final String KEY_WEIGHT = "weight";
+
+    //COLUMN password
+    public static final String KEY_AGE = "age";
+
     //SQL for creating users table
     public static final String SQL_TABLE_USERS = " CREATE TABLE " + TABLE_USERS
             + " ( "
             + KEY_ID + " INTEGER PRIMARY KEY, "
             + KEY_USER_NAME + " TEXT, "
             + KEY_EMAIL + " TEXT, "
-            + KEY_PASSWORD + " TEXT"
+            + KEY_PASSWORD + " TEXT, "
+            + KEY_HEIGHT + " TEXT, "
+            + KEY_WEIGHT + " TEXT, "
+            + KEY_AGE + " TEXT"
             + " ) ";
 
 
@@ -80,6 +92,15 @@ public class SqliteHelper extends SQLiteOpenHelper {
         //Put password in  @values
         values.put(KEY_PASSWORD, user.getPassword());
 
+        //Put height in  @values
+        values.put(KEY_HEIGHT, user.getHeight());
+
+        //Put weight in  @values
+        values.put(KEY_WEIGHT, user.getWeight());
+
+        //Put age in  @values
+        values.put(KEY_AGE, user.getAge());
+
         // insert row
         long todo_id = db.insert(TABLE_USERS, null, values);
     }
@@ -94,7 +115,8 @@ public class SqliteHelper extends SQLiteOpenHelper {
 
         if (cursor != null && cursor.moveToFirst()&& cursor.getCount()>0) {
             //if cursor has value then in user database there is user associated with this given email
-            User user1 = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            User user1 = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3),
+                    cursor.getString(4), cursor.getString(5), cursor.getString(6) );
 
             //Match both passwords check they are same or not
             if (user.getPassword().equalsIgnoreCase(user1.getPassword())) {
@@ -124,10 +146,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
     }
 
     public User getUser(String email){
-        String id = "";
-        String userName = "";
-        String userEmail = "";
-        String password = "";
+        String id = "", userName = "", userEmail = "", password = "", height = "", weight = "",age = "";
 
         //get writable database
         SQLiteDatabase db = this.getWritableDatabase();
@@ -142,11 +161,14 @@ public class SqliteHelper extends SQLiteOpenHelper {
             userName = cursor.getString(1);
             userEmail = cursor.getString(2);
             password = cursor.getString(3);
+            height = cursor.getString(4);
+            weight = cursor.getString(5);
+            age = cursor.getString(6);
             //Log.e("user:", id + ": " + userName + ", " + userEmail + "," + password);
         }
 
         cursor.close();
-        User getUser = new User(id, userName, userEmail, password);
+        User getUser = new User(id, userName, userEmail, password, height, weight, age);
 
         return getUser;
     }
