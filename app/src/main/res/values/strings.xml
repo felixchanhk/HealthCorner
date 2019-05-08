@@ -45,4 +45,19 @@
     <string name="menu_artical">Super Food</string>
     <string name="menu_restaurant">Restaurant</string>
     <string name="menu_sport">Sport</string>
+    <string name="dashboard_superfood">Super Food</string>
+    <string name="dashboard_restaurant">Restaurant</string>
+    <string name="dashboard_sport">Health Sport</string>
+    <string name="dashboard_water">Water Counter</string>
+    <string name="dashboard_bmi">BMI Calculator</string>
+    <string name="dashboard_profile">Your Profile</string>
+    <string name="superfood_title">Super Food</string>
+    <string name="restaurant_title">Restaurant</string>
+    <string name="sport_title">Sport</string>
+    <string name="dashboard_desc1">View super food artical</string>
+    <string name="dashboard_desc2">Health Restaurant in Hong Kong</string>
+    <string name="dashboard_desc3">Do some sport improve your body status</string>
+    <string name="dashboard_desc4">Calculate your BMI, make sure you are under health</string>
+    <string name="dashboard_desc5">Drink at less 8 cups of water per day</string>
+    <string name="dashboard_desc6">Check and review your health data here</string>
 </resources>

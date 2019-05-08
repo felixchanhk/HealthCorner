@@ -22,6 +22,10 @@ import android.widget.TextView;
 import com.example.healthcorner.view.Bmi_Fragment;
 import com.example.healthcorner.view.Dashboard_Fragment;
 import com.example.healthcorner.view.DrinkWater_Fragment;
+import com.example.healthcorner.view.Profile_Fragment;
+import com.example.healthcorner.view.Restaurant_Fragment;
+import com.example.healthcorner.view.Sport_Fragment;
+import com.example.healthcorner.view.Superfood_Fragment;
 
 
 public class HomeScreen extends AppCompatActivity
@@ -116,19 +120,22 @@ public class HomeScreen extends AppCompatActivity
                     new Dashboard_Fragment()).commit();
         } else if (id == R.id.nav_superfood_menu) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Bmi_Fragment()).commit();
+                    new Superfood_Fragment()).commit();
         } else if (id == R.id.nav_restaurant) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new DrinkWater_Fragment()).commit();
+                    new Restaurant_Fragment()).commit();
+        }else if (id == R.id.nav_sport) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new Sport_Fragment()).commit();
         } else if (id == R.id.nav_bmi_calculator) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Bmi_Fragment()).commit();
         } else if (id == R.id.nav_water_counter) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Bmi_Fragment()).commit();
+                    new DrinkWater_Fragment()).commit();
         } else if (id == R.id.nav_profile) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Bmi_Fragment()).commit();
+                    new Profile_Fragment()).commit();
         } else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);

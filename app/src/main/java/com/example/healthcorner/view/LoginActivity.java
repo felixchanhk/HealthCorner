@@ -43,6 +43,11 @@ public class LoginActivity extends AppCompatActivity {
         initCreateAccountTextView();
         initViews();
 
+        //User Logged in Successfully Launch You home screen activity
+        Intent loginIntent = new Intent(LoginActivity.this, HomeScreen.class);
+        startActivity(loginIntent);
+        finish();
+
         //set click event of login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override

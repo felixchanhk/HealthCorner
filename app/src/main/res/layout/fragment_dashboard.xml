@@ -14,21 +14,22 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/bankcardId"
             android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:id="@+id/superfoodID">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundpurple"
                     android:src="@drawable/ic_chrome_reader_mode_black_24dp"
                     android:padding="10dp"/>
@@ -37,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Banking"/>
+                    android:text="@string/dashboard_superfood"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -47,26 +48,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="@string/dashboard_desc1"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:id="@+id/restaurantID">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundpurple"
                     android:src="@drawable/ic_local_dining_black_24dp"
                     android:padding="10dp"/>
@@ -75,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Ideas"/>
+                    android:text="@string/dashboard_restaurant"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -85,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="@string/dashboard_desc2"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -93,6 +96,7 @@
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
+
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"
@@ -103,16 +107,17 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:id="@+id/sportID">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundpurple"
                     android:src="@drawable/ic_directions_run_black_24dp"
                     android:padding="10dp"/>
@@ -121,7 +126,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Add"/>
+                    android:text="@string/dashboard_sport"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -131,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="@string/dashboard_desc3"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -141,8 +146,9 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:id="@+id/bmiCalculatorID">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -151,17 +157,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundpurple"
                     android:padding="10dp"
-                    android:src="@drawable/ic_local_drink_black_24dp" />
+                    android:src="@drawable/ic_grid_on_black_24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Links"
+                    android:text="@string/dashboard_bmi"
                     android:textStyle="bold" />
 
                 <View
@@ -175,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="Check your bank activities"
+                    android:text="@string/dashboard_desc4"
                     android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
@@ -188,12 +194,59 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:layout_width="340dp"
-            android:layout_height="150dp"
-            android:layout_margin="10dp">
+            android:layout_width="160dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:id="@+id/waterCounterID">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/cerclebackgroundpurple"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_local_drink_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/dashboard_water"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/dashboard_desc5"
+                    android:textColor="@android:color/darker_gray" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="160dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:id="@+id/profileID">
             <LinearLayout
 
                 android:layout_width="match_parent"
@@ -201,8 +254,8 @@
                 android:orientation="vertical"
                 android:gravity="center">
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/cerclebackgroundpurple"
                     android:src="@drawable/ic_account_box_black_24dp"
                     android:padding="10dp"/>
@@ -211,7 +264,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Add"/>
+                    android:text="@string/dashboard_profile"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -221,7 +274,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check your bank activities"
+                    android:text="@string/dashboard_desc6"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
