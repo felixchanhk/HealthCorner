@@ -42,4 +42,7 @@
     <string name="menu_water_counter">Water Counter</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_artical">Super Food</string>
+    <string name="menu_restaurant">Restaurant</string>
+    <string name="menu_sport">Sport</string>
 </resources>
