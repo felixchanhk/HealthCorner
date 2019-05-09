@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -19,12 +20,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.TextView;
 
-import com.example.healthcorner.view.Bmi_Fragment;
+import com.example.healthcorner.view.BmiActivity;
 import com.example.healthcorner.view.Dashboard_Fragment;
 import com.example.healthcorner.view.DrinkWater_Fragment;
 import com.example.healthcorner.view.Profile_Fragment;
 import com.example.healthcorner.view.Restaurant_Fragment;
-import com.example.healthcorner.view.Sport_Fragment;
+import com.example.healthcorner.view.SportActivity;
 import com.example.healthcorner.view.Superfood_Fragment;
 
 
@@ -32,11 +33,14 @@ public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView userEmail;
+    Intent intent;
+    public String dbUserEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -55,6 +59,7 @@ public class HomeScreen extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        // initial page
         if( savedInstanceState == null){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Dashboard_Fragment()).commit();
@@ -85,10 +90,11 @@ public class HomeScreen extends AppCompatActivity
         userEmail = findViewById(R.id.userEmail);
 
         Intent getDataIntent = getIntent();
-        String email = getDataIntent.getStringExtra("userEmail");
-        userEmail.setText(email);
+        dbUserEmail = getDataIntent.getStringExtra("userEmail");
+        //dbUserEmail = "abc@abc.com"; //using to test
+        Log.e("dbUserEmail",dbUserEmail);
+        userEmail.setText(dbUserEmail);
 
-        Log.e("action","a3");
         return true;
     }
 
@@ -125,11 +131,14 @@ public class HomeScreen extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Restaurant_Fragment()).commit();
         }else if (id == R.id.nav_sport) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Sport_Fragment()).commit();
+            intent = new Intent(this, SportActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_bmi_calculator) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Bmi_Fragment()).commit();
+            intent = new Intent(this, BmiActivity.class);
+            intent.putExtra("userEmail", dbUserEmail);
+            startActivity(intent);
+            //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+            //        new Bmi_Fragment()).commit();
         } else if (id == R.id.nav_water_counter) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new DrinkWater_Fragment()).commit();

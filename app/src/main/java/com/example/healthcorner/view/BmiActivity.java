@@ -1,21 +1,21 @@
 package com.example.healthcorner.view;
 
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.healthcorner.R;
+import com.example.healthcorner.database.SqliteHelper;
+import com.example.healthcorner.database.model.User;
 
 import java.util.Objects;
 
-public class Bmi_Fragment extends Fragment {
+public class BmiActivity extends AppCompatActivity {
     EditText edt_height;
     EditText edt_weight;
     Button btn_calculate;
@@ -23,31 +23,26 @@ public class Bmi_Fragment extends Fragment {
 
     String heightStr;
     String weightStr;
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //return inflater.inflate(R.layout.fragment_bmi, container, false);
-        View root = inflater.inflate(R.layout.fragment_bmi, container, false);
-
-        return root;
-    }
+    SqliteHelper db = new SqliteHelper(this);
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
+        setContentView(R.layout.activity_bmi);
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
-        super.onActivityCreated(savedInstanceState);
+        edt_height = findViewById(R.id.BMI_height);
+        edt_weight = findViewById(R.id.BMI_weight);
 
-        edt_height = getView().findViewById(R.id.BMI_height);
-        edt_weight = getView().findViewById(R.id.BMI_weight);
-        btn_calculate = getView().findViewById(R.id.BMI_submit);
-        result = getView().findViewById(R.id.BMI_result);
+        Intent getDataIntent = getIntent();
+        String dbUserEmail;
+        dbUserEmail = getDataIntent.getStringExtra("userEmail");
+        //Log.e("BMI USER",dbUserEmail);
+        User getUser = db.getUser(dbUserEmail);
+        edt_height.setText(getUser.getHeight());
+        edt_weight.setText(getUser.getWeight());
 
+        btn_calculate = findViewById(R.id.BMI_submit);
+        result = findViewById(R.id.BMI_result);
 
         btn_calculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +51,7 @@ public class Bmi_Fragment extends Fragment {
                 weightStr = edt_weight.getText().toString();
 
                 if (Objects.equals(heightStr, "") || !Objects.equals(weightStr, "")) {
-                    float heightValue = Float.parseFloat(heightStr);
+                    float heightValue = Float.parseFloat(heightStr)/100;
                     float weightValue = Float.parseFloat(weightStr);
                     float bmi = weightValue / (heightValue * heightValue);
                     displayBMI(bmi);
@@ -94,4 +89,3 @@ public class Bmi_Fragment extends Fragment {
 
     }
 }
-

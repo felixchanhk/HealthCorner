@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.healthcorner">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,20 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".view.sport_video.IntenseVideo01"></activity>
+        <activity android:name=".view.sport_video.LegVideo01" />
+        <activity android:name=".view.sport_video.FlatBellyVideo01" />
+        <activity android:name=".view.sport_video.ArmsVideo01" />
         <activity
             android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".view.RegisterActivity" />
-        <activity android:name=".view.MainActivity" />
-        <activity android:name=".view.LoginActivity">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".view.sport_video.ChestVideo01" />
+        <activity android:name=".view.SportActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.BmiActivity" />
+        <activity android:name=".view.RegisterActivity" />
+        <activity android:name=".view.LoginActivity" />
     </application>
 
 </manifest>

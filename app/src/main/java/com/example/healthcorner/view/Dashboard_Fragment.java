@@ -4,20 +4,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.healthcorner.HomeScreen;
 import com.example.healthcorner.R;
 
 public class Dashboard_Fragment extends Fragment implements View.OnClickListener {
     private CardView superfood, restaurant, sport, bmi, waterCounter, profile;
-    NavigationView navigationView;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onActivityCreated(savedInstanceState);
+
         superfood = (CardView) getView().findViewById(R.id.superfoodID);
         restaurant = (CardView) getView().findViewById(R.id.restaurantID);
         sport = (CardView) getView().findViewById(R.id.sportID);
@@ -57,17 +59,19 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
 
         switch (v.getId()) {
             case R.id.superfoodID :
-                NavigationFocus(R.id.nav_superfood_menu);
                 ft.replace(R.id.fragment_container, new Superfood_Fragment()).commit();
                 break;
             case R.id.restaurantID :
                 ft.replace(R.id.fragment_container, new Restaurant_Fragment()).commit();
                 break;
             case R.id.sportID :
-                ft.replace(R.id.fragment_container, new Sport_Fragment()).commit();
+                intent = new Intent(getActivity(), SportActivity.class);
+                startActivity(intent);
                 break;
             case R.id.bmiCalculatorID :
-                ft.replace(R.id.fragment_container, new Bmi_Fragment()).commit();
+                intent = new Intent(getActivity(), BmiActivity.class);
+                intent.putExtra("userEmail", "abc@abc.com"); //@TODO
+                startActivity(intent);
                 break;
             case R.id.waterCounterID :
                 ft.replace(R.id.fragment_container, new DrinkWater_Fragment()).commit();
@@ -81,9 +85,4 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
 
     }
 
-
-    public void NavigationFocus(int navItemIndex) {
-        navigationView = getView().findViewById(R.id.nav_view);
-        navigationView.getMenu().getItem(navItemIndex).setChecked(true);
-    }
 }

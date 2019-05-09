@@ -164,7 +164,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
             height = cursor.getString(4);
             weight = cursor.getString(5);
             age = cursor.getString(6);
-            //Log.e("user:", id + ": " + userName + ", " + userEmail + "," + password);
+            Log.e("user:", id + ": " + userName + ", " + userEmail + "," + password + " , " + height + " , "+weight + " , " + age);
         }
 
         cursor.close();

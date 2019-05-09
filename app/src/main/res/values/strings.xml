@@ -69,7 +69,15 @@
     <string name="dashboard_desc4">Calculate your BMI, make sure you are under health</string>
     <string name="dashboard_desc5">Drink at less 8 cups of water per day</string>
     <string name="dashboard_desc6">Check and review your health data here</string>
-
+    <string name="input_cm">Input CM</string>
+    <string name="input_kg">Input KG</string>
+    <string name="sport_chest">Chest</string>
+    <string name="title_activity_obliques_video01">ObliquesVideo01</string>
+    <string name="sport_obliques">Obliques</string>
+    <string name="flat_belly">Flat Belly</string>
+    <string name="arms">Arms</string>
+    <string name="legs">Legs</string>
+    <string name="_10_mins_intense_workout">10 Mins Intense Workout</string>
 
 
 </resources>
