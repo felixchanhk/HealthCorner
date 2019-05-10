@@ -148,15 +148,9 @@ public class HomeScreen extends AppCompatActivity
         } else if (id == R.id.nav_water_counter) {
             intent = new Intent(this, WaterActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_profile) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Profile_Fragment()).commit();
-        } else if (id == R.id.nav_share) {
-            Intent sendIntent = new Intent();
-            sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-            sendIntent.setType("text/plain");
-            startActivity(sendIntent);
+        } else if (id == R.id.nav_alarm) {
+            intent = new Intent(this, AlarmActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

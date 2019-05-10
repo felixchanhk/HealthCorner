@@ -33,7 +33,7 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
         sport = (CardView) getView().findViewById(R.id.sportID);
         bmi = (CardView) getView().findViewById(R.id.bmiCalculatorID);
         waterCounter = (CardView) getView().findViewById(R.id.waterCounterID);
-        profile = (CardView) getView().findViewById(R.id.profileID);
+        profile = (CardView) getView().findViewById(R.id.alarmID);
 
         superfood.setOnClickListener(this);
         restaurant.setOnClickListener(this);
@@ -76,7 +76,7 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
             case R.id.waterCounterID :
                 intent = new Intent(getActivity(), WaterActivity.class);
                 startActivity(intent);
-            case R.id.profileID :
+            case R.id.alarmID :
                 intent = new Intent(getActivity(), AlarmActivity.class);
                 startActivity(intent);
 

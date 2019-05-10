@@ -94,6 +94,7 @@
     <string name="nuts_intro">Traditional weight-loss wisdom says stay away from fatty nuts, but diet experts have learned that monounsaturated fats that come in healthy nuts lower bad cholesterol and raise good cholesterol, making them a heart-healthy snack.</string>
     <string name="tomatos_intro">Like broccoli and kale, spinach is loaded with properties that enhance health across your entire body. According to researchers, spinach contains over a dozen flavonoids that are beneficial in fighting cancer and inflammation in the body.</string>
     <string name="dashboard_alarm">Trainnig Reminder</string>
+    <string name="menu_alarm">Trainning Reminder</string>
 
 
 </resources>

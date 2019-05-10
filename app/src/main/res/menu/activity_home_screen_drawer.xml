@@ -29,18 +29,10 @@
             android:icon="@drawable/ic_local_drink_black_24dp"
             android:title="@string/menu_water_counter" />
         <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_account_box_black_24dp"
-            android:title="@string/menu_profile" />
+            android:id="@+id/nav_alarm"
+            android:icon="@drawable/ic_av_timer_black_24dp"
+            android:title="@string/menu_alarm" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
-        </menu>
-    </item>
 
 </menu>
