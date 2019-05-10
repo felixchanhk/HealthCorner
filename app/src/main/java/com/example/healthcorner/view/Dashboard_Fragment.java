@@ -57,7 +57,8 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
 
         switch (v.getId()) {
             case R.id.superfoodID :
-                ft.replace(R.id.fragment_container, new Superfood_Fragment()).commit();
+                intent = new Intent(getActivity(), SuperFoodActivity.class);
+                startActivity(intent);
                 break;
             case R.id.restaurantID :
                 intent = new Intent(getActivity(), RestaurantActivity.class);

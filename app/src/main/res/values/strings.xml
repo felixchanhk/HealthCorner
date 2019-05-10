@@ -85,6 +85,14 @@
     <string name="cat_cave_cafe">Cat cave cafe</string>
     <string name="m2_kitchen">M2 Kitchen</string>
     <string name="the_hideout_coffees">The Hideout Coffees</string>
+    <string name="papaya">Papaya</string>
+    <string name="brazil_nuts">Brazil Nuts</string>
+    <string name="spinach">Spinach</string>
+    <string name="seaweed">Seaweed</string>
+    <string name="tomatoes">Tomatoes</string>
+    <string name="papaya_intro">Papaya’s health benefits are almost countless. It is rich in tropical goodness as well as key flavonoids that help your body fight cancer cells. Carotenes in the fruit help prevent oral cavity and lung cancer, and other ingredients contribute to the management of free radicals</string>
+    <string name="nuts_intro">Traditional weight-loss wisdom says stay away from fatty nuts, but diet experts have learned that monounsaturated fats that come in healthy nuts lower bad cholesterol and raise good cholesterol, making them a heart-healthy snack.</string>
+    <string name="tomatos_intro">Like broccoli and kale, spinach is loaded with properties that enhance health across your entire body. According to researchers, spinach contains over a dozen flavonoids that are beneficial in fighting cancer and inflammation in the body.</string>
 
 
 </resources>

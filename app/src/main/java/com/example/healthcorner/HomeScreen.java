@@ -22,11 +22,10 @@ import android.widget.TextView;
 import com.example.healthcorner.view.AlarmActivity;
 import com.example.healthcorner.view.BmiActivity;
 import com.example.healthcorner.view.Dashboard_Fragment;
-import com.example.healthcorner.view.DrinkWater_Fragment;
 import com.example.healthcorner.view.Profile_Fragment;
 import com.example.healthcorner.view.RestaurantActivity;
 import com.example.healthcorner.view.SportActivity;
-import com.example.healthcorner.view.Superfood_Fragment;
+import com.example.healthcorner.view.SuperFoodActivity;
 import com.example.healthcorner.view.WaterActivity;
 
 
@@ -127,8 +126,8 @@ public class HomeScreen extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, // redirect to dashboard fragment
                     new Dashboard_Fragment()).commit();
         } else if (id == R.id.nav_superfood_menu) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Superfood_Fragment()).commit();
+            intent = new Intent(this, SuperFoodActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_restaurant) {
             intent = new Intent(this, RestaurantActivity.class);
             startActivity(intent);

@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.AlarmActivity"></activity>
+        <activity android:name=".view.SuperFoodActivity"></activity>
+        <activity android:name=".view.AlarmActivity" />
         <activity android:name=".view.WaterActivity" />
         <activity android:name=".view.RestaurantActivity" />
         <activity android:name=".view.sport_video.IntenseVideo01" />
@@ -39,10 +40,9 @@
 
         <receiver android:name=".utility.AlarmReceiver" />
 
-        <service android:name=".utility.RingtonePlayingService"
-            android:enabled="true">
-        </service>
-
+        <service
+            android:name=".utility.RingtonePlayingService"
+            android:enabled="true"></service>
     </application>
 
 </manifest>

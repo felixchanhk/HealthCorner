@@ -51,7 +51,7 @@ public class RestaurantActivity extends AppCompatActivity implements View.OnClic
             Log.e("country: ",country);
         }
 
-        if(country.equalsIgnoreCase("Hong Kong")) {
+        if(country.equalsIgnoreCase("Hong Kong") || country.equalsIgnoreCase("香港")) {
             setContentView(R.layout.activity_restaurant_hk);
             Toast.makeText(getApplicationContext(),"GPS Lat = "+latitude+
                     "\n Lon = "+longitude+
