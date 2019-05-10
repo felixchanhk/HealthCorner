@@ -81,6 +81,10 @@
     <string name="sevva">Sevva</string>
     <string name="mana">Mana</string>
     <string name="restaurant_cedele">Cedele</string>
+    <string name="restaurant_cedele_intro"><![CDATA[Bakery Cafe  Shop C G/F 58-64 Paterson Street  Fashion Walk, Causeway Bay HK  T: +852 2110 0490  Mon - Thu & Sun : 11am to 11pm  Fri & Sat : 11am to 11:30pm  Sun/PH : 11am to 11pm]]></string>
+    <string name="cat_cave_cafe">Cat cave cafe</string>
+    <string name="m2_kitchen">M2 Kitchen</string>
+    <string name="the_hideout_coffees">The Hideout Coffees</string>
 
 
 </resources>
