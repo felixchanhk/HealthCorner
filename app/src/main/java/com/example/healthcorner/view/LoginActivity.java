@@ -1,6 +1,8 @@
 package com.example.healthcorner.view;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
@@ -34,6 +36,10 @@ public class LoginActivity extends AppCompatActivity {
 
     //Declaration SqliteHelper
     SqliteHelper sqliteHelper;
+
+
+    public static final String USER_EMAIL_KEY = "USER_EMAIL_KEY";
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,12 +75,17 @@ public class LoginActivity extends AppCompatActivity {
 
                         //User Logged in Successfully Launch You home screen activity
                         Intent loginIntent = new Intent(LoginActivity.this, HomeScreen.class);
-                        //User getUser = sqliteHelper.getUser(Email);
-                        User getUser = sqliteHelper.getUser("abc@abc.com");
+                        User getUser = sqliteHelper.getUser(Email);
                         Log.e("login test: ",getUser.getEmail());
                         loginIntent.putExtra("userName",getUser.getUserName());
                         loginIntent.putExtra("userEmail",getUser.getEmail());
                         Log.e("login test2: ",getUser.getUserName());
+
+                        //save to share preferences
+                        sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString(USER_EMAIL_KEY, Email);
+                        editor.commit();
 
                         startActivity(loginIntent);
                         finish();

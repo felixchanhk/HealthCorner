@@ -76,9 +76,11 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
             case R.id.waterCounterID :
                 intent = new Intent(getActivity(), WaterActivity.class);
                 startActivity(intent);
+                break;
             case R.id.alarmID :
                 intent = new Intent(getActivity(), AlarmActivity.class);
                 startActivity(intent);
+                break;
 
         }
 
