@@ -82,6 +82,7 @@
         <string name="cat_cave_cafe">貓洞咖啡館</string>
         <string name="m2_kitchen">M2 Kitchen</string>
         <string name="the_hideout_coffees">Hideout Coffees</string>
+    <string name ="papaya">木瓜</string>
         <string name ="brazil_nuts">巴西堅果</string>
         <string name ="spinach">菠菜</string>
         <string name ="seaweed">海藻</string>
@@ -89,4 +90,6 @@
         <string name ="papaya_intro">木瓜的健康益處幾乎無數。它富含熱帶風味以及幫助身體對抗癌細胞的關鍵黃酮類化合物。水果中的胡蘿蔔素有助於預防口腔和肺癌，其他成分有助於自由基的管理</string>
         <string name ="nuts_intro">傳統的減肥智慧說遠離脂肪堅果，但飲食專家已經知道，健康堅果中的單不飽和脂肪可以降低壞膽固醇，提高膽固醇，使它們成為一種心臟健康的零食。</string>
         <string name ="tomatos_intro">與西蘭花和羽衣甘藍一樣，菠菜中含有可增強整個身體健康的特性。根據研究人員的說法，菠菜含有十幾種黃酮類化合物，有助於對抗體內的癌症和炎症。</string>
+    <string name ="dashboard_alarm">訓練提醒</string>
+    <string name ="menu_alarm">訓練提醒</string>
 </resources>

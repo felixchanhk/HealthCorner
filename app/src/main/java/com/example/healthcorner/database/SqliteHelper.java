@@ -16,7 +16,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
     //DATABASE NAME
     public static final String DATABASE_NAME = "health_corner";
     //DATABASE VERSION
-    public static final int DATABASE_VERSION = 8;
+    public static final int DATABASE_VERSION = 9;
     //TABLE NAME
     public static final String TABLE_USERS = "users";
     //TABLE USERS COLUMNS
