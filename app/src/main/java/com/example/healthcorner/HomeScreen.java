@@ -19,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.TextView;
 
+import com.example.healthcorner.view.AlarmActivity;
 import com.example.healthcorner.view.BmiActivity;
 import com.example.healthcorner.view.Dashboard_Fragment;
 import com.example.healthcorner.view.DrinkWater_Fragment;
@@ -26,6 +27,7 @@ import com.example.healthcorner.view.Profile_Fragment;
 import com.example.healthcorner.view.RestaurantActivity;
 import com.example.healthcorner.view.SportActivity;
 import com.example.healthcorner.view.Superfood_Fragment;
+import com.example.healthcorner.view.WaterActivity;
 
 
 public class HomeScreen extends AppCompatActivity
@@ -106,7 +108,8 @@ public class HomeScreen extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            intent = new Intent(this, AlarmActivity.class);
+            startActivity(intent);
         }
 
         Log.e("action","a4");
@@ -139,8 +142,8 @@ public class HomeScreen extends AppCompatActivity
             //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
             //        new Bmi_Fragment()).commit();
         } else if (id == R.id.nav_water_counter) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new DrinkWater_Fragment()).commit();
+            intent = new Intent(this, WaterActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_profile) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Profile_Fragment()).commit();

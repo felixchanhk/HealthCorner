@@ -36,7 +36,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/intense_workout_pro"
+                        android:background="@drawable/hideout01"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -76,7 +76,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/flat_belly_pro"
+                        android:background="@drawable/m2_kitchen01"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -110,7 +110,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/leg_pro"
+                        android:background="@drawable/cat_cave_01"
                         android:gravity="center"
                         android:orientation="vertical">
 

@@ -15,32 +15,23 @@ public class SqliteHelper extends SQLiteOpenHelper {
 
     //DATABASE NAME
     public static final String DATABASE_NAME = "health_corner";
-
     //DATABASE VERSION
-    public static final int DATABASE_VERSION = 2;
-
+    public static final int DATABASE_VERSION = 8;
     //TABLE NAME
     public static final String TABLE_USERS = "users";
-
     //TABLE USERS COLUMNS
     //ID COLUMN @primaryKey
     public static final String KEY_ID = "id";
-
     //COLUMN user name
     public static final String KEY_USER_NAME = "username";
-
     //COLUMN email
     public static final String KEY_EMAIL = "email";
-
     //COLUMN password
     public static final String KEY_PASSWORD = "password";
-
     //COLUMN password
     public static final String KEY_HEIGHT = "height";
-
     //COLUMN password
     public static final String KEY_WEIGHT = "weight";
-
     //COLUMN password
     public static final String KEY_AGE = "age";
 
@@ -56,6 +47,17 @@ public class SqliteHelper extends SQLiteOpenHelper {
             + KEY_AGE + " TEXT"
             + " ) ";
 
+    //SQL for creating users table
+    public static final String SQL_TABLE_WATER = " CREATE TABLE " + TABLE_USERS
+            + " ( "
+            + KEY_ID + " INTEGER PRIMARY KEY, "
+            + KEY_USER_NAME + " TEXT, "
+            + KEY_EMAIL + " TEXT, "
+            + KEY_PASSWORD + " TEXT, "
+            + KEY_HEIGHT + " TEXT, "
+            + KEY_WEIGHT + " TEXT, "
+            + KEY_AGE + " TEXT"
+            + " ) ";
 
     public SqliteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -72,6 +74,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         //drop table to create new one if database version updated
         sqLiteDatabase.execSQL(" DROP TABLE IF EXISTS " + TABLE_USERS);
+        sqLiteDatabase.execSQL(SQL_TABLE_USERS);
     }
 
     //using this method we can add users to user table
