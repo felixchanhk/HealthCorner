@@ -39,15 +39,15 @@ public class RestaurantActivity extends AppCompatActivity {
         }else {
             latitude = l.getLatitude();
             longitude = l.getLongitude();
-            country = getCityName(latitude,longitude);
-            Log.e("country",country);
+            //country = getCityName(latitude,longitude);
+            //Log.e("country",country);
         }
 
-        if(country.equalsIgnoreCase("Hong Kong")) {
+        //if(country.equalsIgnoreCase("Hong Kong")) {
             setContentView(R.layout.activity_restaurant_hk);
-        }else{
-            setContentView(R.layout.activity_restaurant_macus);
-        }
+        //}else{
+            //setContentView(R.layout.activity_restaurant_macau);
+        //}
 
         btnLoc = (Button) findViewById(R.id.btnGetLoc);
         tv = (TextView) findViewById(R.id.geo);

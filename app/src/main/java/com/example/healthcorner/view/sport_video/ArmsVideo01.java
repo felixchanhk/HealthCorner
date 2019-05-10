@@ -49,7 +49,7 @@ public class ArmsVideo01 extends YouTubeBaseActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG,"onClick Intializing Youtube Player.");
-                mYouTubePlayerView.initialize(YouTubeConfig.getApiKey(), mOnInitializedListener);
+                mYouTubePlayerView.initialize(com.example.healthcorner.utility.YouTubeConfig.getApiKey(), mOnInitializedListener);
             }
         });
     }
