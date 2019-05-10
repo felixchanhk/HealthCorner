@@ -74,11 +74,11 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
                 startActivity(intent);
                 break;
             case R.id.waterCounterID :
-                ft.replace(R.id.fragment_container, new DrinkWater_Fragment()).commit();
-                break;
+                intent = new Intent(getActivity(), WaterActivity.class);
+                startActivity(intent);
             case R.id.profileID :
-                ft.replace(R.id.fragment_container, new Profile_Fragment()).commit();
-                break;
+                intent = new Intent(getActivity(), AlarmActivity.class);
+                startActivity(intent);
 
         }
 

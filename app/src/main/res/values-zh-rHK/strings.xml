@@ -17,7 +17,7 @@
         <string name="nav_header_title" translatable="false">Android Studio</string>
         <string name="nav_header_subtitle" translatable="false"> android.studio@android.com</string>
         <string name="nav_header_desc">導航標題</string>
-        <string name="action_settings">Setting</string>
+        <string name="action_settings">設定</string>
         <string name="chat_fragment_content">聊天片段</string>
         <string name="Share">分享</string>
 

@@ -33,8 +33,9 @@ public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView userEmail;
+    TextView userName;
     Intent intent;
-    public String dbUserEmail;
+    public String dbUserEmail,dbUserName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,12 +88,16 @@ public class HomeScreen extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home_screen, menu);
 
+        userName = findViewById(R.id.userName);
         userEmail = findViewById(R.id.userEmail);
 
         Intent getDataIntent = getIntent();
+        dbUserName = getDataIntent.getStringExtra("userName");
         dbUserEmail = getDataIntent.getStringExtra("userEmail");
-        //dbUserEmail = "abc@abc.com"; //using to test
-        Log.e("dbUserEmail",dbUserEmail);
+
+        Log.e("User Name",dbUserName + dbUserEmail);
+
+        userName.setText(dbUserName);
         userEmail.setText(dbUserEmail);
 
         return true;

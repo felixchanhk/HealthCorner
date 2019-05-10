@@ -18,7 +18,7 @@
     <string name="nav_header_title" translatable="false">Android Studio4</string>
     <string name="nav_header_subtitle" translatable="false">android.studio@android.com5</string>
     <string name="nav_header_desc">Navigation header6</string>
-    <string name="action_settings">Settings7</string>
+    <string name="action_settings">Settings</string>
     <string name="chat_fragment_content">Chat Fragment</string>
     <string name="Share">Share</string>
 
@@ -68,7 +68,7 @@
     <string name="dashboard_desc3">Do some sport improve your body status</string>
     <string name="dashboard_desc4">Calculate your BMI, make sure you are under health</string>
     <string name="dashboard_desc5">Drink at less 8 cups of water per day</string>
-    <string name="dashboard_desc6">Check and review your health data here</string>
+    <string name="dashboard_desc6">Set the time to remind you to work out</string>
     <string name="input_cm">Input CM</string>
     <string name="input_kg">Input KG</string>
     <string name="sport_chest">Chest</string>
@@ -93,6 +93,7 @@
     <string name="papaya_intro">Papaya’s health benefits are almost countless. It is rich in tropical goodness as well as key flavonoids that help your body fight cancer cells. Carotenes in the fruit help prevent oral cavity and lung cancer, and other ingredients contribute to the management of free radicals</string>
     <string name="nuts_intro">Traditional weight-loss wisdom says stay away from fatty nuts, but diet experts have learned that monounsaturated fats that come in healthy nuts lower bad cholesterol and raise good cholesterol, making them a heart-healthy snack.</string>
     <string name="tomatos_intro">Like broccoli and kale, spinach is loaded with properties that enhance health across your entire body. According to researchers, spinach contains over a dozen flavonoids that are beneficial in fighting cancer and inflammation in the body.</string>
+    <string name="dashboard_alarm">Trainnig Reminder</string>
 
 
 </resources>

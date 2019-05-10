@@ -43,7 +43,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/cerclebackgroundpurple"
+                            android:background="@drawable/orange"
                             android:padding="10dp"
                             android:src="@drawable/ic_chrome_reader_mode_black_24dp" />
 
@@ -88,7 +88,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/cerclebackgroundpurple"
+                            android:background="@drawable/green"
                             android:padding="10dp"
                             android:src="@drawable/ic_local_dining_black_24dp" />
 
@@ -187,7 +187,7 @@
                             <ImageView
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:background="@drawable/cerclebackgroundpurple"
+                                android:background="@drawable/deep_red"
                                 android:padding="10dp"
                                 android:src="@drawable/ic_grid_on_black_24dp" />
 
@@ -241,7 +241,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/cerclebackgroundpurple"
+                            android:background="@drawable/light_blue"
                             android:padding="10dp"
                             android:src="@drawable/ic_local_drink_black_24dp" />
 
@@ -287,15 +287,15 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/cerclebackgroundpurple"
+                            android:background="@drawable/pink"
                             android:padding="10dp"
-                            android:src="@drawable/ic_account_box_black_24dp" />
+                            android:src="@drawable/ic_av_timer_black_24dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="@string/dashboard_profile"
+                            android:text="@string/dashboard_alarm"
                             android:textStyle="bold" />
 
                         <View

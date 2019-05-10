@@ -72,7 +72,9 @@ public class LoginActivity extends AppCompatActivity {
                         //User getUser = sqliteHelper.getUser(Email);
                         User getUser = sqliteHelper.getUser("abc@abc.com");
                         Log.e("login test: ",getUser.getEmail());
+                        loginIntent.putExtra("userName",getUser.getUserName());
                         loginIntent.putExtra("userEmail",getUser.getEmail());
+                        Log.e("login test2: ",getUser.getUserName());
 
                         startActivity(loginIntent);
                         finish();
@@ -93,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
     // for TextView yet not supported in Xml so i have done it programmatically)
     private void initCreateAccountTextView() {
         TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
-        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
+        textViewCreateAccount.setText(fromHtml("<font color='#000000'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
         textViewCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
