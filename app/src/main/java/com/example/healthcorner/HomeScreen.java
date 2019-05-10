@@ -6,7 +6,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -24,7 +23,7 @@ import com.example.healthcorner.view.BmiActivity;
 import com.example.healthcorner.view.Dashboard_Fragment;
 import com.example.healthcorner.view.DrinkWater_Fragment;
 import com.example.healthcorner.view.Profile_Fragment;
-import com.example.healthcorner.view.Restaurant_Fragment;
+import com.example.healthcorner.view.RestaurantActivity;
 import com.example.healthcorner.view.SportActivity;
 import com.example.healthcorner.view.Superfood_Fragment;
 
@@ -128,8 +127,8 @@ public class HomeScreen extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Superfood_Fragment()).commit();
         } else if (id == R.id.nav_restaurant) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new Restaurant_Fragment()).commit();
+            intent = new Intent(this, RestaurantActivity.class);
+            startActivity(intent);
         }else if (id == R.id.nav_sport) {
             intent = new Intent(this, SportActivity.class);
             startActivity(intent);
