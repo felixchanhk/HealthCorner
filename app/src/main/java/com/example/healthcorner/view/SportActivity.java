@@ -23,6 +23,7 @@ public class SportActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sport);
 
+
         chestID =  (CardView) findViewById(R.id.sport_chestID);
         sport_obliquesID =  (CardView) findViewById(R.id.sport_armsID);
         sport_flatBellyID =  (CardView) findViewById(R.id.sport_flatBellyID);

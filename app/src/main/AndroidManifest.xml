@@ -3,6 +3,9 @@
     package="com.example.healthcorner">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.sport_video.IntenseVideo01"></activity>
+        <activity android:name=".view.RestaurantActivity"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity android:name=".view.sport_video.IntenseVideo01" />
         <activity android:name=".view.sport_video.LegVideo01" />
         <activity android:name=".view.sport_video.FlatBellyVideo01" />
         <activity android:name=".view.sport_video.ArmsVideo01" />
@@ -21,16 +29,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
         <activity android:name=".view.sport_video.ChestVideo01" />
-        <activity android:name=".view.SportActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".view.SportActivity" />
         <activity android:name=".view.BmiActivity" />
         <activity android:name=".view.RegisterActivity" />
-        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.LoginActivity"/>
     </application>
 
 </manifest>

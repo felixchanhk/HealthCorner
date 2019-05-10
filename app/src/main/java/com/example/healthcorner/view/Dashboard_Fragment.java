@@ -8,12 +8,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.healthcorner.HomeScreen;
 import com.example.healthcorner.R;
 
 public class Dashboard_Fragment extends Fragment implements View.OnClickListener {
@@ -62,7 +60,8 @@ public class Dashboard_Fragment extends Fragment implements View.OnClickListener
                 ft.replace(R.id.fragment_container, new Superfood_Fragment()).commit();
                 break;
             case R.id.restaurantID :
-                ft.replace(R.id.fragment_container, new Restaurant_Fragment()).commit();
+                intent = new Intent(getActivity(), RestaurantActivity.class);
+                startActivity(intent);
                 break;
             case R.id.sportID :
                 intent = new Intent(getActivity(), SportActivity.class);

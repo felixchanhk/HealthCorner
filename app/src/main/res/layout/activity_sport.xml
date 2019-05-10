@@ -34,6 +34,7 @@
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:text="@string/sport_chest"
+                    android:textSize="22sp"
                     android:textColor="@color/backgroundcolor"
                     android:background="@color/black_overlay"/>
                 <View
@@ -64,6 +65,7 @@
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:text="@string/arms"
+                    android:textSize="22sp"
                     android:textColor="@color/backgroundcolor"
                     android:background="@color/black_overlay"/>
                 <View
@@ -102,6 +104,7 @@
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:text="@string/flat_belly"
+                    android:textSize="22sp"
                     android:textColor="@color/backgroundcolor"
                     android:background="@color/black_overlay"/>
                 <View
@@ -133,6 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/legs"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     android:textColor="@color/backgroundcolor"
                     android:background="@color/black_overlay"/>
@@ -174,6 +178,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/_10_mins_intense_workout"
+                    android:textSize="22sp"
                     android:textStyle="bold"
                     android:textColor="@color/backgroundcolor"
                     android:background="@color/black_overlay"/>
