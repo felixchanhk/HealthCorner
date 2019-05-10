@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">健康角</string>
+        <string name="login">登錄</string>
+
+        <string name="back_to_login">返回登錄</string>
+        <string name="register">註冊</string>
+        <string name="password">密碼</string>
+        <string name="email">電子郵件</string>
+        <string name="userName">用戶名</string>
+        <string name="userHeight">高度</string>
+        <string name="userWeight">權重</string>
+        <string name="userAge">年齡</string>
+
+        <string name="navigation_drawer_open">打開導航抽屜2 </string>
+        <string name="navigation_drawer_close">關閉導航抽屜3 </string>
+        <string name="nav_header_title" translatable="false"> Android Studio4 </string>
+        <string name="nav_header_subtitle" translatable="false"> android.studio@android.com5 </string>
+        <string name="nav_header_desc">導航標題6 </string>
+        <string name="action_settings"> Settings7 </string>
+        <string name="chat_fragment_content">聊天片段</string>
+        <string name="Share">分享</string>
+
+        <string name="title_activity_home_screen"> HomeScreen </string>
+        <string name="menu_home">主頁</string>
+        <string name="menu_gallery">圖庫</string>
+        <string name="menu_slideshow">幻燈片</string>
+        <string name="menu_tools">工具</string>
+        <string name="menu_share">分享</string>
+        <string name="menu_send">發送</string>
+
+        <string name="hello_blank_fragment"> Hello空白片段</string>
+        <string name="drink_water_fragment_content">計算飲用水總量</string>
+        <string name="BMI_title">計算BMI：</string>
+        <string name="BMI_intro">輸入以下信息以計算您的BMI值</string>
+        <string name="BMI_submit">計算</string>
+        <string name="Enter_height">輸入高度</string>
+        <string name="severely_underweight">嚴重不足</string>
+        <string name="very_underweight">非常輕盈</string>
+        <string name="underweight"> underweight </string>
+        <string name="normal_weight">正常體重</string>
+        <string name="over_weight">超重</string>
+        <string name="first_class_obese">頭等肥胖</string>
+        <string name="second_class_obese">第二類肥胖</string>
+        <string name="third_class_obese">第三類肥胖</string>
+
+        <string name="menu_bmi_calculator"> BMI計算器</string>
+        <string name="menu_water_counter">水計數器</string>
+        <string name="menu_profile">個人資料</string>
+        <string name="menu_dashboard">儀表板</string>
+        <string name="menu_artical">超級食物</string>
+        <string name="menu_restaurant">餐廳</string>
+        <string name="menu_sport"> Sport </string>
+        <string name="dashboard_superfood">超級食物</string>
+        <string name="dashboard_restaurant">餐廳</string>
+        <string name="dashboard_sport">健康運動</string>
+        <string name="dashboard_water">水計數器</string>
+        <string name="dashboard_bmi"> BMI計算器</string>
+        <string name="dashboard_profile">您的個人資料</string>
+        <string name="superfood_title">超級食物</string>
+        <string name="restaurant_title">餐廳</string>
+        <string name="sport_title">運動</string>
+        <string name="dashboard_desc1">查看超級食物</string>
+        <string name="dashboard_desc2">香港健康餐廳</string>
+        <string name="dashboard_desc3">做一些運動改善你的身體狀態</string>
+        <string name="dashboard_desc4">計算您的BMI，確保您處於健康狀況</string>
+        <string name="dashboard_desc5">每天少喝8杯水</string>
+        <string name="dashboard_desc6">在此處檢查並查看您的健康數據</string>
+        <string name="input_cm">輸入CM </string>
+        <string name="input_kg">輸入KG </string>
+        <string name="sport_chest">胸部</string>
+        <string name="title_activity_obliques_video01"> ObliquesVideo01 </string>
+        <string name="sport_obliques"> Obliques </string>
+        <string name="flat_belly">扁平腹部</string>
+        <string name="arms">武器</string>
+        <string name="legs">腿</string>
+        <string name="_10_mins_intense_workout"> 10分鐘激烈鍛煉</string>
+        <string name="sevva"> Sevva </string>
+        <string name="mana">法力</string>
+        <string name="restaurant_cedele"> Cedele </string>
+        <string name="restaurant_cedele_intro"> <![CDATA[Bakery Cafe  Shop CG / F銅鑼灣百德新街58-64號香港電話：+852 2110 0490週一至週四及週日：上午11點至晚上11點週五及週六：上午11點太陽/ PH：上午11:30至晚上11點]]> </string>
+        <string name="cat_cave_cafe">貓洞咖啡館</string>
+        <string name="m2_kitchen"> M2 Kitchen </string>
+        <string name="the_hideout_coffees"> Hideout Coffees </string>
+</resources>
