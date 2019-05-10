@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/bg02"
+    android:background="@drawable/bg03"
     tools:context=".view.WaterActivity">
 
     <TextView
