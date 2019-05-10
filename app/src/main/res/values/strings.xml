@@ -95,6 +95,7 @@
     <string name="tomatos_intro">Like broccoli and kale, spinach is loaded with properties that enhance health across your entire body. According to researchers, spinach contains over a dozen flavonoids that are beneficial in fighting cancer and inflammation in the body.</string>
     <string name="dashboard_alarm">Trainnig Reminder</string>
     <string name="menu_alarm">Trainning Reminder</string>
+    <string name="health_corner">Health Corner</string>
 
 
 </resources>

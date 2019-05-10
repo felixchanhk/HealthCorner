@@ -29,8 +29,9 @@
         <activity android:name=".view.sport_video.ChestVideo01" />
         <activity android:name=".view.SportActivity" />
         <activity android:name=".view.BmiActivity" />
-        <activity android:name=".view.RegisterActivity" />
-        <activity android:name=".view.LoginActivity">
+        <activity android:name=".view.RegisterActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".view.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

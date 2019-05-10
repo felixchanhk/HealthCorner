@@ -14,6 +14,17 @@
         android:layout_marginRight="16dp"
         android:orientation="vertical">
 
+        <TextView
+            android:text="@string/health_corner"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:textColor="#33cc33"
+            android:background="@color/ic_launcher_background"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutEmail"
             android:layout_width="match_parent"
